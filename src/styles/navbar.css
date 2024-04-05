@@ -1,0 +1,42 @@
+/*Estilos del Componente Navbar*/
+
+.navbar {
+  background-color: #1c1c1c;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app_icon {
+  width: 76px;
+  height: 46px;
+}
+
+.navbar-btn {
+  width: 124px;
+  height: 20px;
+  background-color: transparent;
+  color: white;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 120px;
+  height: 45px;
+}
+
+.reseña-btn{
+    background-color: #554F95;
+    border-radius: 6px;
+    width: 182px;
+}
+
+.movie_ticket_icon{
+    width: 49.96px;
+    height: 45px;
+}

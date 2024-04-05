@@ -1,0 +1,9 @@
+/*Estilos del Body*/
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #282828;
+  width: 100%;
+  font-family: "Inter", sans-serif;
+}
