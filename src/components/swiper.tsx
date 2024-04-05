@@ -11,7 +11,6 @@ import { ContextSlider } from "../pages/destacadas";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 export default function SwiperComponent() {
-  
   interface Trailers {
     Title: string;
     url: string;
@@ -87,7 +86,7 @@ export default function SwiperComponent() {
                         src={reseña_icon}
                         alt="reseña-icon"
                       />
-                      <p>Reseña</p>
+                      <p>Dejar reseña</p>
                     </section>
                   </Link>
                 </section>

@@ -30,15 +30,29 @@
   height: 45px;
 }
 
-.reseña-btn{
-    background-color: #554F95;
-    border-radius: 6px;
-    width: 182px;
+.reseña-btn {
+  background-color: #554f95;
+  border-radius: 6px;
+  width: 182px;
 }
 
-.movie_ticket_icon{
-    width: 49.96px;
-    height: 45px;
+.reseña-btn:hover {
+  background-color: white;
+  border-radius: 6px;
+  width: 182px;
+  color: #554f95;
+  transition-duration: 0.7s;
 }
 
+.reseña-btn:not(hover) {
+  background-color: #554f95;
+  border-radius: 6px;
+  width: 182px;
+  color: white;
+  transition-duration: 0.7s;
+}
 
+.movie_ticket_icon {
+  width: 49.96px;
+  height: 45px;
+}

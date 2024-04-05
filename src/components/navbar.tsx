@@ -94,7 +94,7 @@ function ResponsiveAppBar() {
               <button className="navbar-btn">Cartelera</button>
             </Link>
             <Link style={{ textDecoration: "none" }} to="reseña">
-              <button className="navbar-btn reseña-btn">Reseña</button>
+              <button className="navbar-btn reseña-btn">Reseñas</button>
             </Link>
           </Box>
         </Toolbar>
