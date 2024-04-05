@@ -11,7 +11,9 @@ import vector from "../images/Vector.png";
 import movie_ticket from "../images/Movie Ticket.png";
 import { Link } from "react-router-dom";
 
-const pages = ["Destacadas", "Cartelera", "Reseñas"];
+/* Nabvar con botones de acceso a las diferentes rutas */
+
+const pages = ["Cartelera", "Reseña"];
 
 function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(
@@ -77,7 +79,12 @@ function ResponsiveAppBar() {
             >
               {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
+                  <Link
+                    style={{ textDecoration: "none", color: "black" }}
+                    to={page === "Reseña" ? "reseña" : "cartelera"}
+                  >
+                    <Typography textAlign="center">{page}</Typography>
+                  </Link>
                 </MenuItem>
               ))}
             </Menu>

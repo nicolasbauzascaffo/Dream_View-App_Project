@@ -14,7 +14,7 @@ export default function Movie_section() {
   return (
     <div className="movie_section">
       {loading
-        ? Array.from(new Array(14)).map((index) => (
+        ? Array.from(new Array(16)).map((index) => (
             <Box key={index}>
               <Skeleton
                 variant="rectangular"

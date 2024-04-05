@@ -5,8 +5,6 @@ import Movie_section from "../components/movie_section";
 import { createContext } from "react";
 import "../styles/cartelera.css";
 
-/* Interfaces del Contexto que engloba a los componentes hijos */
-
 interface Movies {
   Title: string;
   imdbID: string;
@@ -21,6 +19,10 @@ interface ChangeContext {
 export const Context = createContext<ChangeContext>();
 
 export default function Cartelera() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const [movies, setmovies] = useState<Movies[]>([]);
   const [loading, setloading] = useState<boolean>(false);
 

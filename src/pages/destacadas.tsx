@@ -21,17 +21,21 @@ interface ChangeContext {
 export const ContextSlider = createContext<ChangeContext>();
 
 export default function Destacadas() {
-  /* Interfaces de las películas */
-
-  /* UseEffect y useState para obtener las películas */
-
   const [movies, setMovies] = useState<Movies[]>([]);
+  const [backgroundImage, setBackgroundImage] = useState<string>("");
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   useEffect(() => {
     getAllMovies()
       .then((res) => {
         if (res.status === 200) {
           setMovies(res.data);
+          if (res.data.length > 0) {
+            setBackgroundImage(res.data[0].Images[1]);
+          }
         } else {
           console.log("Bad request, 404!");
         }
@@ -45,12 +49,20 @@ export default function Destacadas() {
   Nota: las imágenes están descargadas en formato jpg ya que la URL de la api del poster de cada película da error.
   */
 
+  const handleSlideChange = (index: number) => {
+    const movie = movies[index];
+    if (movie) {
+      setBackgroundImage(movie.Images[1]);
+    }
+  };
+
   return (
     <ContextSlider.Provider value={{ movies }}>
       <div
         className="destacados"
+        style={{ backgroundImage: `url(${backgroundImage})` }}
       >
-        <SwiperComponent />
+        <SwiperComponent onSlideChange={handleSlideChange} />
       </div>
     </ContextSlider.Provider>
   );

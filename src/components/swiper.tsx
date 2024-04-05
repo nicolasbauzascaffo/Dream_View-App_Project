@@ -10,7 +10,11 @@ import { useContext } from "react";
 import { ContextSlider } from "../pages/destacadas";
 import { Swiper, SwiperSlide } from "swiper/react";
 
-export default function SwiperComponent() {
+interface SwiperComponentProps {
+  onSlideChange: (index: number) => void;
+}
+
+export default function SwiperComponent({ onSlideChange }: SwiperComponentProps) {
   interface Trailers {
     Title: string;
     url: string;
@@ -38,6 +42,10 @@ export default function SwiperComponent() {
     return movieTrailer ? movieTrailer.url : "";
   };
 
+  const handleSlideChange = (index: number) => {
+    onSlideChange(index);
+  };
+
   return (
     <Swiper
       modules={[Navigation]}
@@ -45,6 +53,7 @@ export default function SwiperComponent() {
       pagination={{ clickable: true }}
       slidesPerView={1}
       spaceBetween={1}
+      onSlideChange={(swiper) => handleSlideChange(swiper.activeIndex)}
     >
       {movies
         .sort((a, b) => parseInt(a.imdbRating) - parseInt(b.imdbRating))
