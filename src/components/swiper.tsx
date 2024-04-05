@@ -11,7 +11,33 @@ import { ContextSlider } from "../pages/destacadas";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 export default function SwiperComponent() {
+  
+  interface Trailers {
+    Title: string;
+    url: string;
+  }
+
+  const trailers: Trailers[] = [
+    {
+      Title: "Avatar",
+      url: "https://www.youtube.com/watch?v=CM79GTEm2ps",
+    },
+    {
+      Title: "I Am Legend",
+      url: "https://www.youtube.com/watch?v=TXQ7kRnFXS4",
+    },
+    {
+      Title: "300",
+      url: "https://www.youtube.com/watch?v=UrIbxk7idYA",
+    },
+  ];
+
   const { movies } = useContext(ContextSlider);
+
+  const getTrailer = (name: string) => {
+    const movieTrailer = trailers.find((movie) => movie.Title === name);
+    return movieTrailer ? movieTrailer.url : "";
+  };
 
   return (
     <Swiper
@@ -45,11 +71,13 @@ export default function SwiperComponent() {
                 </section>
                 <section className="movie-slide-icons">
                   <section className="btn-box">
-                    <img
-                      className="icon-btn"
-                      src={trailer}
-                      alt="trailer-icon"
-                    />
+                    <Link to={getTrailer(movie.Title)}>
+                      <img
+                        className="icon-btn"
+                        src={trailer}
+                        alt="trailer-icon"
+                      />
+                    </Link>
                     <p>Ver Trailer</p>
                   </section>
                   <Link style={{ textDecoration: "none" }} to="/reseña">

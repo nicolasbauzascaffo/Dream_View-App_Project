@@ -95,4 +95,17 @@
   .movie_section {
     justify-content: center;
   }
+  .cartelera_section h1 {
+    margin-left: 20px;
+  }
+}
+
+@media only screen and (max-device-width: 1000px) and (orientation: landscape) {
+  .movie_section {
+    justify-content: center;
+    align-items: center;
+  }
+  .cartelera_section h1 {
+    margin-left: 70px;
+  }
 }

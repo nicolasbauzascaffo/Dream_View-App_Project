@@ -14,8 +14,8 @@ function App() {
           <Route index element={<Destacadas />} />
           <Route path="cartelera" element={<Cartelera />} />
           <Route path="reseña" element={<Reseña />} />
-          <Route path="*" element={<Notfound />} />
         </Route>
+        <Route path="*" element={<Notfound />} />
       </Routes>
     </div>
   );
