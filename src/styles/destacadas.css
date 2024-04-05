@@ -1,0 +1,147 @@
+/*Estilos del carrousel*/
+
+.destacados {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: white;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  font-size: 40px;
+  width: 60px;
+  height: 60px;
+}
+
+.movie-slide {
+  max-width: 1097px;
+  width: 100%;
+  height: 549px;
+  display: flex;
+  gap: 5px;
+  position: relative;
+  margin: 5px;
+}
+
+.movie-slide-img {
+  max-width: 299px;
+  width: 100%;
+}
+
+.movie-rating {
+  color: white;
+  display: flex;
+  background-color: #554f95;
+  border-radius: 6px;
+  position: absolute;
+  top: -5px;
+  left: -15px;
+  width: 69px;
+  height: 69px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1px;
+}
+
+.movie-rating p{
+    margin: 0;
+    font-size: 14px;
+}
+
+.movie-rating img {
+  width: 17px;
+  height: 17px;
+}
+
+.movie-slide-img img {
+  width: 299px;
+  height: 530px;
+  border-radius: 6px;
+}
+
+.movie-info {
+  width: 783px;
+  height: 343px;
+}
+
+.movie-slide-info {
+  max-width: 783px;
+  height: 343px;
+  width: 100%;
+  border: solid 5px #554f95;
+  border-radius: 6px;
+  background-color: #d9d9d9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.movie-slide-info-container {
+  max-width: 680px;
+  height: 292px;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  font-family: "Inter", sans-serif;
+  gap: 10px;
+}
+
+.movie-slide-info-container h2 {
+  font-size: 69px;
+  font-weight: normal;
+  margin: 0;
+  color: #181818;
+}
+
+.movie-slide-info-container p {
+  font-size: 18px;
+  margin: 0;
+  color: #181818;
+}
+
+.movie-slide-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  height: 187px;
+}
+
+.icon-btn {
+  width: 49.96px;
+  height: 45px;
+}
+
+.btn-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  flex-direction: column;
+  color: white;
+  gap: 10px;
+  font-weight: 200px;
+}
+
+.btn-box img {
+  cursor: pointer;
+}
